@@ -67,6 +67,7 @@ CREATE TABLE trayecto
     id serial NOT NULL,
     id_tren integer,
     id_estacion integer,
+    nombre character varying(100),
     CONSTRAINT trayecto_pkey PRIMARY KEY (id),
     CONSTRAINT trayecto_estacion_fkey FOREIGN KEY (id_estacion)
         REFERENCES estacion (id) MATCH SIMPLE
